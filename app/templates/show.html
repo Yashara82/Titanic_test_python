@@ -1,0 +1,36 @@
+
+<!doctype html>
+
+<html lang="en-us">   
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Titanic Data</title>
+  </head>
+
+  <body>
+    <h1>Titanic Data:</h1>
+    <table>
+                
+        <thead>
+          <tr style="text-align: right">
+          {% for column in records.columns : %}
+            <th>{{column}}</th>
+          {% endfor %}
+          </tr>
+        </thead>
+        
+        <tbody>
+          {% for values in records.values : %}
+          <tr>
+              {% for val in values: %}
+                  <th>{{ val }}</th>
+              {% endfor %}
+          </tr>
+          {% endfor %}             
+        </tbody>
+        
+      </table>
+
+  </body> 
+</html>
